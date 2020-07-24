@@ -18,7 +18,7 @@ public class Level2AuthLink extends AuthLink {
     public Level2AuthLink(String levelUserId, String levelUserName) throws ParseException {
         super(levelUserId, levelUserName);
     }
-
+    @Override
     public AuthInfo doAuth(String uId, String orderId, Date authDate) {
         Date date = AuthService.queryAuthInfo(levelUserId, orderId);
         if (null == date) {
